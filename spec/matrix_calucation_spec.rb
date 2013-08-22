@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe  MatrixCalucation do 
-	it "should ok" do 
+	it "should be ok" do 
 		true.should be_true
 	end
 
@@ -97,7 +97,7 @@ describe  MatrixCalucation do
 		end
 
 		describe "sum" do 
-			it "should eql 53 when n = 3" do
+			it "should get right sum number" do
 				{
 					3 => 53, 
 					8 => 167

@@ -22,7 +22,7 @@ end
 
 desc 'Run all tests by default'
 task :default do 
-  system("rspec spec --color")
+  system("rspec spec --color --format d")
 end
 
 
