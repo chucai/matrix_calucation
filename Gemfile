@@ -5,6 +5,11 @@ source "http://ruby.taobao.org"
 # development dependencies will be added by default to the :development group.
 gemspec
 
+gem "pry"
+gem "pry-doc"
+gem 'pry-remote'
+gem 'pry-nav'
+
 # jquery-rails is used by the dummy application
 # gem "jquery-rails"
 

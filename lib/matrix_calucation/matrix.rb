@@ -7,11 +7,13 @@ module MatrixCalucation
 
 		def sum(n = nil)
 			n ||= size
-			if n == size
-				10
-			else
-				6
-			end
+			array = convert_to_array
+			# binding.pry
+			sum = 0
+			(0...n).each do |i|
+				sum += array[i].to_i
+			end 
+			return sum
 		end
 
 		def convert_to_array

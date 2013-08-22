@@ -22,8 +22,8 @@ describe  MatrixCalucation do
 				@matrix.sum.should eql 10
 			end
 
-			it "should eql 6 wehn n = 3" do 
-				@matrix.sum(3).should eql 6
+			it "should eql 7 wehn n = 3" do 
+				@matrix.sum(3).should eql 7
 			end
 		end
 
@@ -48,8 +48,29 @@ describe  MatrixCalucation do
 	end
 
 	##
-	##
-	##
+	## 1 2 3
+	## 4 5 6
+	## 7 8 9
+	context "middle" do 
+		before do 
+			@matrix = MatrixCalucation::Matrix.new
+			@matrix.append %w(1 2 3)
+			@matrix.append %w(4 5 6)
+			@matrix.append %w(7 8 9)
+		end
+
+		describe "convert_to_array" do 
+			it "should eql [1,2,3,6,9,8,7,4,5]" do 
+				@matrix.convert_to_array.should eql %w(1 2 3 6 9 8 7 4 5)
+			end
+		end
+
+		describe "sum" do 
+			it "should eql 29 when n = 6" do 
+				@matrix.sum(6).should eql 29
+			end
+		end
+	end
 
 	##
 	##
@@ -68,11 +89,23 @@ describe  MatrixCalucation do
 			@matrix.append(%w(09 22 56 31 05))
 		end
 
-		# describe "one_convert_number" do 
-		# 	it "should eql 16" do 
-		# 		@matrix.one_convert_number.should eql 16
-		# 	end
-		# end
+		describe "convert_to_array" do 
+			it "should be true" do 
+				result = %w(12 32 09 11 34 07 43 19 05 31 56 22 09 11 27 08 54 76 23 09 63 78 23 18 25)
+				@matrix.convert_to_array.should eql result
+			end
+		end
+
+		describe "sum" do 
+			it "should eql 53 when n = 3" do
+				{
+					3 => 53, 
+					8 => 167
+				}.each do |n, v|
+					@matrix.sum(n).should eql v
+				end 
+			end
+		end
 	end
 
 end
