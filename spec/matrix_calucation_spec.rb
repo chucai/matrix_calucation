@@ -33,18 +33,23 @@ describe  MatrixCalucation do
 			end
 		end
 
-		describe "convert_to_array" do
-			it "should eql [1,2,3,4]" do 
-				@matrix.convert_to_array.should eql [1,2,4,3]
-			end 
-		end
+		# #should remove to bridge spec class
+		# describe "convert_to_array" do
+		# 	it "should eql [1,2,3,4]" do 
+		# 		@matrix.send(:bridge).convert_to_array.should eql [1,2,4,3]
+		# 	end 
+		# end
 
-		describe "one_convert_number" do 
-			it "should eql 4" do 
-				@matrix.one_convert_number.should eql 4
-			end
-		end
+		# describe "one_convert_number" do 
+		# 	it "should eql 4" do 
+		# 		@matrix.send(:bridge).one_convert_number.should eql 4
+		# 	end
+		# end
 	end
+
+	##
+	##
+	##
 
 	##
 	##
@@ -63,11 +68,11 @@ describe  MatrixCalucation do
 			@matrix.append(%w(09 22 56 31 05))
 		end
 
-		describe "one_convert_number" do 
-			it "should eql 16" do 
-				@matrix.one_convert_number.should eql 16
-			end
-		end
+		# describe "one_convert_number" do 
+		# 	it "should eql 16" do 
+		# 		@matrix.one_convert_number.should eql 16
+		# 	end
+		# end
 	end
 
 end
